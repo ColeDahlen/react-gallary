@@ -9,6 +9,17 @@ let [imageList, setImageList] = useState('');
   useEffect(() => {
     getGallery()
   }, [])
+  // const likeFunction = (event) =>{
+  //   let id = event.currentTarget.id
+  //   console.log(id);
+  //   axios.put(`/gallery/like/${id}`)
+  //       .then(response =>{
+  //           getGallery();
+  //       })
+  //       .catch(error =>{
+  //           console.log(error)
+  //       })
+  // }
 
   const getGallery = () => {
     axios.get('/gallery')

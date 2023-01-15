@@ -13,7 +13,7 @@ function GalleryItem(props){
     const likeFunction = (event) =>{
         let id = event.currentTarget.id
         console.log(id);
-        axios.put(`/like/${id}`)
+        axios.put(`/gallery/like/${id}`)
             .then(response =>{
                 props.getGallery();
             })
